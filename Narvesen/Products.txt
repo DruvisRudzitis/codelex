@@ -1,0 +1,4 @@
+Doktordesa;100;5|
+Maize;50;15|
+Sviests;80;7|
+Ūdens;40;3|
