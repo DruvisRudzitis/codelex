@@ -13,5 +13,5 @@ $allNumbers = $numberGenerator->getAllNumbers();
 $numberStorage->store($allNumbers);
 
 echo 'Number chain: ' . implode(' ', $numberGenerator->getAllNumbers()) . PHP_EOL;
-echo 'Nev number: ' . $randomNumber . PHP_EOL;
+echo 'New number: ' . $randomNumber . PHP_EOL;
 echo 'AVG: ' . number_format($numberGenerator->getAvg(),2) . PHP_EOL;
