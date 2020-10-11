@@ -9,7 +9,7 @@ $name = $_POST['name'] ?? 'Janis';
 
 $person = $personStorage->getByName($name);
 
-echo $person->getName() . ' / ' . $person->getAge() . ' / ' . $person->getCount();
+echo $person->getName() . ' \ ' . $person->getAge() . ' / ' . $person->getCount();
 
 ?>
 
