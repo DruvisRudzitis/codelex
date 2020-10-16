@@ -4,19 +4,20 @@ $name = $_POST['name'];
 $surname = $_POST['surname'];
 $code = $_POST['code'];
 $address = $_POST['address'];
+$searchCode = $_POST['searchCode'];
 
-extract($_POST);
-$file = fopen('person.csv','a');
+$file = fopen('person.csv', 'a+');
 
-fwrite($file, $name . ", ");
-fwrite($file, $surname . ", ");
-fwrite($file, $code . ", ");
-fwrite($file, $address . "\n");
-
-
-while($row = fgetcsv($file)) {
-    if (in_array("codes", $row)) {
-        echo implode(' , ', $row);
+if ($name !== NULL && $surname !== NULL && $code !== NULL && $address !== NULL) {
+    fwrite($file, $name . ",");
+    fwrite($file, $surname . ",");
+    fwrite($file, $code . ",");
+    fwrite($file, $address . "\n");
+} else {
+    while ($row = fgetcsv($file)) {
+        if ($row[2] == $searchCode) {
+            echo implode(', ', $row);
+        }
     }
 }
 
@@ -43,12 +44,12 @@ while($row = fgetcsv($file)) {
 <body>
 <form action="/" method="post">
     <h1>Search person</h1>
-    <label for="code">Enter personal code:</label>
-    <input type="text" id="codes" name="codes"/>
+    <label for="searchCode">Enter personal code:</label>
+    <input type="text" id="searchCode" name="searchCode"/>
     <button type="submit">
         submit
     </button>
-    <h2 <?php echo implode(' , ', $row); ?>  </h2>
+    <h2 <?php echo implode(' , ', $row); ?> </h2>
 </form>
 </body>
 </html>
