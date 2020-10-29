@@ -65,5 +65,6 @@ switch ($routeInfo[0]) {
 
         (new $controller)->$method($vars);
 
+        
         break;
 }
