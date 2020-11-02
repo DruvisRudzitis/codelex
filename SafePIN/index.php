@@ -16,28 +16,6 @@ if (strlen($pin) == 4){
     $_SESSION['pin'] = '';
     $locked =!($pin === $safe->getPin());
 }
-
-
-
-
-//session_start();
-//
-//$locked = true;
-//
-//if (isset($_POST['pin']))
-//{
-//    $_SESSION['pin'] .= $_POST['pin'];
-//}
-//
-//$pin = $_SESSION['pin'] ?? '';
-//
-//if (strlen($pin) >=4)
-//{
-//    unset($_SESSION['pin']);
-//
-//    $locked =!($pin === '1234');
-//}
-
 ?>
 
 <html>
