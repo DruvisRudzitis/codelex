@@ -32,7 +32,7 @@ $picture = $data->getPicture();
 <body>
 <form action="" method="post">
 <picture>
-    <source srcset=<?php echo $picture[0]; ?>>
+    <source srcset=<?php echo  $picture[0]; ?>>
     <img width="500">
 </picture>
     <br>
