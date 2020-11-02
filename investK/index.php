@@ -1,7 +1,5 @@
 <?php
-//$investment = $_GET["investment"];
-//$interestRate = $_GET["interestRate"];
-//$year = $_GET["years"];
+
 require_once 'Invest.php';
 
 $data = new Invest();
@@ -15,8 +13,6 @@ while ($x <= $year){
     $investment = $investment * (1+$interestRate/100);
     $x++;
 }
-
-
 ?>
 
 <html>
